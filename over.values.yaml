@@ -1,0 +1,11 @@
+initFile: |-
+  /usr/local/bin/superset-init --username admin --firstname Marcin --lastname Pyrka --email admin@monotype.pl --password P@ssw0rd
+  gunicorn superset:app
+
+service:
+  type: LoadBalancer
+  port: 8088
+
+image:
+  repository: "amancevice/superset"
+  tag: "0.35.0"

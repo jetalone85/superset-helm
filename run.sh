@@ -1,0 +1,1 @@
+helm install superset . --set persistence.enabled=true --values over.values.yaml --namespace superset
